@@ -1,17 +1,17 @@
-count  characters
-offset characters
+int16  charactersCount
+int16 charactersOffset
 
 byte   unk1
 int32  unk2
-int32  unk3
 int32  maxCharacters
-int32  unk4
-int16  unk5
-int32  unk6
+int32  unk3
+int16  unk4
+int32  unk6 #40
 int32  unk7
-int32  unk8
+int32  unk8 #24
 array  characters
-- int32  unk1
+- int32  offsetToBase
+- int32  nextPlayerOffset
 - offset name
 - offset details
 - count  details
@@ -29,11 +29,10 @@ array  characters
 - int32  location2
 - int32  location3
 - int64  lastOnline
-- byte   unk4
-- int32  unk5
-- int32  unk6
-- int32  unk7
-- int32  unk8
+- byte   deletionInProgress
+- int64  deletionScheduleTime
+- int32  timeUntilDeletionApply [in case of playerLeve > n, we dont delete it instanlty, we give deletionTime] n, server levelVariable
+- int32  weapon
 - int32  earring1
 - int32  earring2
 - int32  chest
@@ -47,7 +46,7 @@ array  characters
 - int32  face
 - int64  appearance # ?
 - int32  unk10
-- int32  unk11
+- int32  isGm [1/0]
 - int32  unk12
 - int16  unk13
 - int32  unk14
