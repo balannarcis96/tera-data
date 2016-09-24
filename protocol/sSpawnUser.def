@@ -18,15 +18,16 @@ float  x
 float  y
 float  z
 int16  w
-int32  relation
+int32  relation{ 1 = 0 = neutral , 2=party member 3 = enemy, 4 = [orange title?],5 =enemy2?, 6 =[title darker], 7=raid leader? 8=enemye3?,
+												//9 =raid leader?, [light blue] 10=[green title]?, 11=raid leader?, 12 =[DARKx2 title]?, 13=[DARKx2 title]?, 14=1? [...] }
 uint32 model
 int16  unk1 # always 0?
 int16  unk2
 int16  unk3
 int16  unk4 # always 0?
-int16  unk5 # 0-3?
-byte   unk6 # always 1?
-byte   unk7 # boolean? (alive?)
+int16  unk5 # player state { 0 = 1= noncombat ,2 = inCombat ,3 = onMount }
+byte   #visible?
+byte   #alive
 uint64 appearance # TODO 8 byte buffer?
 int32  weapon
 int32  chest
@@ -36,9 +37,9 @@ int32  inner
 int32  head
 int32  face
 int32  unk10 # 0,1,3?
+int32  //mount
 int32  unk11
-int32  unk11b
-int32  unk12
+int32  unk12 # title id?
 int32  unk13 # always 0?
 int32  unk14 # always 0?
 byte   unk15 # always 0?
@@ -57,7 +58,8 @@ int32  unk26b
 int32  unk26c
 int32  unk26d
 int32  weaponEnchant
-int16  unk27 # always 0?
+byte   pixie
+byte   second aggro [blue]
 int32  level
 int32  unk28 # always 0?
 int32  unk29 # always 0?
@@ -73,12 +75,9 @@ int32  unk38
 byte   unk39 # boolean?
 int32  unk40 # 0-3? faction?
 int32  unk41
-int32  unk42 # 0-4?
-byte   unk43 # always 1?
-int32  unk44
-int32  unk45 # always 0?
-int32  unk46 # 0 or 64?
-float  unk47 # always 1.0?
+int32  unk42 # 
+byte   unk43 #
+float  scale [1.0f]
 
 string name
 string guild
