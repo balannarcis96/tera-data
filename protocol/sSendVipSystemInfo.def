@@ -1,5 +1,5 @@
 int16  unk1
-byte   unk2
+byte   unk2 #hasTeraRewards [bool]
 int32  teraRewardsValue
 int32  unk3
 int32  unk4
