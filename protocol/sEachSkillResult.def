@@ -1,5 +1,5 @@
-count  unk6
-offset unk6
+count  VisualEffectsCount
+offset VisualEffectsArrayOffset
 
 uint64 source
 uint64 unkUID
