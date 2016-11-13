@@ -27,8 +27,9 @@ int32  skill2 # usually 0?
 int32  unk4 # always 0?
 int32  attackid
 
-array  unk6
-- int32 unk1
+array  VisualEffectsArray
+- int16 baseOffset
+- int16 nextItemBaseOffset
 - float unk2
 - float unk3
 - float unk4
