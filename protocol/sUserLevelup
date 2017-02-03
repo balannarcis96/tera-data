@@ -1,0 +1,4 @@
+uint16  size
+uint16  opcode
+uint64  player_world_id
+uint32  new_level
