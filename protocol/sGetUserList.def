@@ -18,7 +18,7 @@ array  characters
 - offset details2
 - count  details2
 - offset guild
-- int32  id
+- int32  id #database_id  [used for binding,crafter id etc]
 - int32  gender
 - int32  race
 - int32  class
