@@ -7,7 +7,7 @@ count  details2
 uint32 model
 uint64 cid
 uint32 serverId
-uint32 playerId
+uint32 playerId #database_id  [used for binding,crafter id etc]
 int32  unk1
 byte   unk2
 int32  unk3
