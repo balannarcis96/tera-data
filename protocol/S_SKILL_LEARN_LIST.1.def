@@ -1,15 +1,13 @@
-count skillList
-offset skillList
+#sizeof skillListElement = 26 [bytes] 
+uint16 count
+uint16 next #this is wrriten by the first iteration , just write (uint16)0
 
 array skillList
-- count requiredSkills
-- offset requiredSkills
-- uint32 unk1
+- uint16 baseOffset   # we write stream pos here, then go to [byteCountFromBeginingToStartOfNextSkill] from last item and write the position there
+- uint16 next     #this is written by the next iteration, just write (uint16)0
+- uint64 unk1
 - uint32 skill
 - byte type # 0 = passive, 1 = active
 - uint32 price # price in copper
 - uint32 level # required level
 - byte learned
-- array requiredSkills
-- - uint32 skill
-- - byte type # 0 = passive, 1 = active
